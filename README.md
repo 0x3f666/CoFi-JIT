@@ -135,8 +135,3 @@ The tool generates several output files:
 - API keys and endpoints need to be manually configured
 - Performance depends on the quality and quantity of training examples
 - Some defect types may be harder to detect than others
-
-## Support
-
-For issues or questions, please contact the maintainers.
-```
