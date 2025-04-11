@@ -13,12 +13,12 @@ from sklearn.metrics import precision_score, recall_score, f1_score
 import google.generativeai as genai
 
 client = OpenAI(
-    api_key="f4cba9ca-5cbc-4997-997b-76399faa1c59",
+    api_key="",
     base_url="https://ark.cn-beijing.volces.com/api/v3"
 )
 
 genai.configure(
-    api_key='sk-TB5xahA0SAB8WZAD0KxZYQAf7IsFSb3gLK2aDp1ZNi7efr2p',
+    api_key='',
     transport="rest",
     client_options={"api_endpoint": "https://api.openai-proxy.org/google"},
 )
