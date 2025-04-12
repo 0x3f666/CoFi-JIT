@@ -66,7 +66,7 @@ Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the 
 
 ### Replication of RQ1
 ```bash
-python demo.py --mode Repair --retrieve semantic --example_num 3
+python demo.py --mode Repair --retrieve semantic --example_num 5
 ```
 
 ```bash
