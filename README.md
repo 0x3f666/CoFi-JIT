@@ -85,7 +85,7 @@ python demo.py --mode Classification --retrieve semantic --example_num 3
 
 ### Replication of pipeline performance
 ```bash
-python demo.py --mode Classification --retrieve semantic --example_num 3
+python demo.py --mode c_and_r --example_num 3
 ```
 
 ### Input Files
