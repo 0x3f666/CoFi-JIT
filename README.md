@@ -1,17 +1,5 @@
 # CoFi-JIT
 
-## Overview
-
-This tool is designed to detect and repair specific types of defects in Java code. It utilizes AI models (OpenAI and Google's Gemini) to analyze code modifications, classify potential defects, and provide fixes when applicable.
-
-## Features
-
-- **Defect Detection**: Identifies 16 specific types of code defects in Java
-- **Defect Classification**: Categorizes detected defects into predefined types
-- **Code Repair**: Provides automated fixes for identified defects
-- **Multiple Modes**: Supports classification-only, repair-only, or combined workflows
-- **Retrieval Methods**: Offers both semantic and random example retrieval for context
-
 ## Defect Categories
 
 The tool recognizes the following defect types:
