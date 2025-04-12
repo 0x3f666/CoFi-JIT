@@ -22,22 +22,6 @@ The tool recognizes the following defect types:
 16. DELETE_THROWS_EXCEPTION
 17. CLEAN (no defect)
 
-## Requirements
-
-- Python 3.x
-- Required packages:
-  - openai
-  - google-generativeai
-  - numpy
-  - scikit-learn
-  - argparse
-  - json
-  - csv
-  - re
-  - os
-  - time
-  - random
-
 ## Installation
 
 1. Clone the repository
