@@ -57,11 +57,18 @@ Before running the tool, ensure you have:
 
 ## Usage
 
-### Command Line Arguments
+### Pre-process
+First, preprocess the dataset to get the similarity scores for each code in the test set.
+```bash
+python preprocess.py
+```
 
+### Command Line Arguments
+First, preprocess the dataset to get the similarity scores for each code in the test set.
 ```bash
 python demo.py --model <mode> [--retrieve <method>] [--example_num <number>]
 ```
+Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the similarities based on semantic.
 
 **Options:**
 - `--model`: Required. Choose between:
@@ -73,6 +80,30 @@ python demo.py --model <mode> [--retrieve <method>] [--example_num <number>]
   - `semantic` - Semantic similarity-based retrieval
 - `--example_num`: Optional. Number of examples to use (default: 1)
 
+### Replication of RQ1
+```bash
+python demo.py --mode Repair --retrieve semantic --example_num 3
+```
+
+```bash
+python demo.py --model Repair --retrieve random --example_num 5
+```
+
+### Replication of RQ2
+```bash
+python demo.py --mode Prediction --example_num 3
+```
+
+### Replication of RQ3
+```bash
+python demo.py --mode Classification --retrieve semantic --example_num 3
+```
+
+### Replication of pipeline performance
+```bash
+python demo.py --mode Classification --retrieve semantic --example_num 3
+```
+
 ### Input Files
 
 The tool expects the following JSON files in the working directory:
@@ -82,33 +113,6 @@ The tool expects the following JSON files in the working directory:
 3. `history_data.json` - For storing classification results
 4. Similarity files (e.g., `sim_semantic_*.txt`) for semantic retrieval
 
-### Output Files
-
-The tool generates several output files:
-
-1. `category_stats_log.txt` - Detailed classification statistics
-2. `prompts.txt` - Generated prompts for analysis
-3. `matched_answers.csv` - Correctly repaired samples
-4. `mismatched_answers.csv` - Incorrectly repaired samples
-5. `re_results.csv` - Repair accuracy results
-6. `ans.txt` - Raw repair outputs
-
-## Examples
-
-1. **Classification with semantic retrieval:**
-   ```bash
-   python demo.py --model Classification --retrieve semantic --example_num 3
-   ```
-
-2. **Repair with random retrieval:**
-   ```bash
-   python demo.py --model Repair --retrieve random --example_num 2
-   ```
-
-3. **Combined classification and repair:**
-   ```bash
-   python demo.py --model c_and_r --example_num 1
-   ```
 
 ## Notes
 
@@ -116,10 +120,3 @@ The tool generates several output files:
 - Code normalization is performed to handle formatting differences
 - Extensive logging is provided for debugging and analysis
 - The classification process maintains state between runs using `history_data.json`
-
-## Limitations
-
-- Requires properly formatted input JSON files
-- API keys and endpoints need to be manually configured
-- Performance depends on the quality and quantity of training examples
-- Some defect types may be harder to detect than others
