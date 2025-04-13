@@ -78,11 +78,13 @@ python demo.py --model Repair --retrieve random --example_num 5
 Then you can get a file named `random_repair_results.csv`, which records the defect repair accuracy.
 The successfully repaired code can be found in `matched_answers.csv`.
 ### Replication of RQ2
+To reproduce the results in RQ2, please run the following command:
 ```bash
 python demo.py --mode Prediction --example_num 3
 ```
 Then you can get a file named `prediction_result.txt`, which records the results of defect prediction.
 ### Replication of RQ3
+To reproduce the results in RQ3, please run the following command:
 ```bash
 python demo.py --mode Classification --retrieve semantic --example_num 3
 ```
