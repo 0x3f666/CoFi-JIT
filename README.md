@@ -52,7 +52,7 @@ First, preprocess the dataset to get the similarity scores for each code in the 
 ```bash
 python demo.py --model <mode> [--retrieve <method>] [--example_num <number>]
 ```
-Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the similarities based on semantic.
+Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the similarities based on semantics.
 
 **Options:**
 - `--model`: Required. Choose between:
@@ -81,7 +81,7 @@ The successfully repaired code can be found in `matched_answers.csv`.
 ```bash
 python demo.py --mode Prediction --example_num 3
 ```
-
+Then you can get a file named `prediction_result.txt`, which records the results of defect prediction.
 ### Replication of RQ3
 ```bash
 python demo.py --mode Classification --retrieve semantic --example_num 3
