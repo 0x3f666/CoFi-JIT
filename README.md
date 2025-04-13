@@ -88,7 +88,7 @@ To reproduce the results in RQ3, please run the following command:
 ```bash
 python demo.py --mode Classification --retrieve semantic --example_num 3
 ```
-
+Then you can get a file named `semantic_categorization_result.txt`, which records the results of defect prediction.
 ### Replication of pipeline performance
 ```bash
 python demo.py --mode c_and_r --example_num 5
