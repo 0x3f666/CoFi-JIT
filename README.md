@@ -91,20 +91,3 @@ python demo.py --mode Classification --retrieve semantic --example_num 3
 ```bash
 python demo.py --mode c_and_r --example_num 5
 ```
-
-### Input Files
-
-The tool expects the following JSON files in the working directory:
-
-1. `train_data.json` - Training dataset
-2. `test_data.json` - Test dataset
-3. `history_data.json` - For storing classification results
-4. Similarity files (e.g., `sim_semantic_*.txt`) for semantic retrieval
-
-
-## Notes
-
-- The tool implements rate limiting and retry mechanisms for API calls
-- Code normalization is performed to handle formatting differences
-- Extensive logging is provided for debugging and analysis
-- The classification process maintains state between runs using `history_data.json`
