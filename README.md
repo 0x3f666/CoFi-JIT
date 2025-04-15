@@ -46,7 +46,7 @@ First, preprocess the dataset to get the similarity scores for each code in the 
 ```bash
 python preprocess.py
 ```
-Then, you will get the "sim_semantic.txt" representing the similarities based on semantics.
+Then, you will get the "sim_semantic_multiv_cross_oasis_1.5.txt" representing the similarities based on semantics.
 ### Command Line Arguments
 First, preprocess the dataset to get the similarity scores for each code in the test set.
 ```bash
