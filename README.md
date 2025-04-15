@@ -42,7 +42,7 @@ Before running the tool, ensure you have:
 ## Usage
 
 ### Pre-process
-First, preprocess the dataset to get the similarity scores for each code in the test set.
+Preprocess the dataset to obtain the similarity scores for each piece of code in the test set. Alternatively, you can directly use the file we obtained, sim_semantic_multiv_cross_oasis_1.5.txt, and skip this step.
 ```bash
 python preprocess.py
 ```
