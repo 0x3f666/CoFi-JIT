@@ -42,11 +42,11 @@ Before running the tool, ensure you have:
 ## Usage
 
 ### Pre-process
-Preprocess the dataset to obtain the similarity scores for each piece of code in the test set. Alternatively, you can directly use the file we obtained, sim_semantic_multiv_cross_oasis_1.5.txt, and skip this step.
+Preprocess the dataset to obtain the similarity scores for each piece of code in the test set. Alternatively, you can directly use the file we obtained, `sim_semantic_multiv_cross_oasis_1.5.txt`, and skip this step.
 ```bash
 python preprocess.py
 ```
-Then, you will get the "sim_semantic_multiv_cross_oasis_1.5.txt" representing the similarities based on semantics.
+Then, you will get the `sim_semantic_multiv_cross_oasis_1.5.txt` representing the similarities based on semantics.
 ### Command Line Arguments
 The command format and parameter descriptions are as follows:
 ```bash
