@@ -9,7 +9,7 @@ from tqdm import tqdm
 def read_data(file_address):
     try:
         with open(file_address, "r", encoding='utf-8') as file:
-            data = json.load(file)  # 一次性解析整个文件
+            data = json.load(file)
             ids = [sample.get("id") for sample in data]
             fix_codes = [sample.get("FixCode") for sample in data]
             bug_codes = [sample.get("BugCode") for sample in data]
@@ -35,13 +35,13 @@ def read_data(file_address):
 
 def get_data():
     training_bug, training_fix, training_labels, training_cleans, test_bug, test_fix, test_labels, test_cleans = [], [], [], [], [], [], [], []
-    train_file_address = 'train_data.json'
+    train_file_address = 'Data/train_data.json'
     cur_ids, cur_fixs, cur_bugs, cur_labels, cur_cleans = read_data(train_file_address)
     training_bug += cur_bugs
     training_fix += cur_fixs
     training_labels += cur_labels
     training_cleans += cur_cleans
-    test_file_address = 'val_data.json'
+    test_file_address = 'Data/test_data.json'
     cur_ids, cur_fixs, cur_bugs, cur_labels, cur_cleans = read_data(test_file_address)
     test_bug += cur_bugs
     test_fix += cur_fixs
@@ -98,7 +98,7 @@ def pre_process_samples_token(test_codes, training_codes):
             fp.write('\n')
 
 
-model = SentenceTransformer("Kwaipilot/OASIS-code-embedding-1.5B")
+model = SentenceTransformer("../LLM_Comment_Generation/Kwaipilot/OASIS-code-embedding-1.5B")
 
 
 def generate_diff(clean, bug):
@@ -175,5 +175,5 @@ def pre_process_samples_semantic(test_cleans, test_bug, training_cleans, trainin
 if __name__ == '__main__':
     training_bug, training_fix, training_labels, training_cleans, test_bug, test_fix, test_labels, test_cleans = get_data()
     # pre_process_samples_token(test_bug, training_bug)
-    pre_process_samples_semantic(test_bug, training_bug)
+    pre_process_samples_semantic(test_cleans, test_bug, training_cleans, training_bug, training_fix)
 
