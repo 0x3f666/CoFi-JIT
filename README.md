@@ -50,12 +50,12 @@ Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the 
 ### Command Line Arguments
 First, preprocess the dataset to get the similarity scores for each code in the test set.
 ```bash
-python demo.py --model <mode> [--retrieve <method>] [--example_num <number>]
+python demo.py --mode <mode> [--retrieve <method>] [--example_num <number>]
 ```
 Then, you will get the "sim_token.txt" and "sim_semantic.txt", representing the similarities based on semantics.
 
 **Options:**
-- `--model`: Required. Choose between:
+- `--mode`: Required. Choose between:
   - `Classification` - Only classify defects
   - `Repair` - Only repair defects
   - `c_and_r` - Combined classification and repair
