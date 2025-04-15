@@ -98,7 +98,7 @@ def pre_process_samples_token(test_codes, training_codes):
             fp.write('\n')
 
 
-model = SentenceTransformer("../LLM_Comment_Generation/Kwaipilot/OASIS-code-embedding-1.5B")
+model = SentenceTransformer("Kwaipilot/OASIS-code-embedding-1.5B")
 
 
 def generate_diff(clean, bug):
