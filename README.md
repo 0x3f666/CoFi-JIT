@@ -35,8 +35,8 @@ The tool recognizes the following defect types:
 Before running the tool, ensure you have:
 
 1. Valid API keys for:
-   - OpenAI (configured in `client = OpenAI()`)
-   - Google Generative AI (configured in `genai.configure()`)
+   - Doubao-1.5-pro (configured in `client = OpenAI()`)
+   - Gemini-2.0-flash (configured in `genai.configure()`)
 2. Proper endpoint URLs for both services
 
 ## Usage
