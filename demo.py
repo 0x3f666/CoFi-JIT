@@ -536,7 +536,7 @@ def test_classify_random(test_bug, test_labels, test_clean, training_bug, traini
     with open('category_stats_log.txt', 'w', encoding='utf-8') as log_file, open('prompts.txt', 'w',
                                                                                  encoding='utf-8') as fp1:
         num = len(test_bug)
-        for i in range(2):
+        for i in range(num):
             if i in skip:
                 continue
 
@@ -639,7 +639,7 @@ def test_classify_repair(test_bug, test_fix, test_labels, test_clean, training_b
     with open('prompts.txt', 'w', encoding='utf-8') as fp1, open(sim_file, 'r', encoding='utf-8') as fpp:
         lines = fpp.readlines()
 
-        for i in range(1):
+        for i in range(len(test_bug)):
             if test_labels[i] != category:
                 continue
             test_clean_code = test_clean[i]
